@@ -1,13 +1,33 @@
-﻿using System;
+using System;
 
 class Person
 {
-   public string name;
-   public int age;
+    public string name;
+    public int age;
 
+    //akhane function ba method declare kore value gulo nibo
+
+    public void GetValue(string n, int a)
+    {
+        name = n;
+        age = a;
+    }
+
+
+    //akhon constructor banabo. but constructor mehtod ar class name soman rakhte hobe.
+
+    public Person(){
+        name = "hena";
+        age = 1000;
+    }
+    public Person(string n, int a) { 
+        name = n;
+        age = a;
+    }
+    // but akhon chai amra parameter hisebe value pass korbo...
     public void DisplayInfo()
     {
-
+        Console.WriteLine($"Name: {name}, Age: {age}");
     }
 }
 
@@ -16,6 +36,32 @@ class Test
 {
     public static void Main(string[] args)
     {
+
+
+        Person person1 = new Person("Khushi as parameter", 22);
+        //person1.name = "khushi";
+        //person1.age = 22;
+        //person1.GetValue("khushi", 22);
+        Console.WriteLine("Person 1:");
+        person1.DisplayInfo();
+        
+      
+        Person person2 = new Person();
+
+        
+        //person2.name = "reshma";
+        //person2.age = 54;
+        //person2.GetValue("veer", 25); constructors use kore object create korar somoy i value ba default man set korte chai.
+
+        Console.WriteLine("PErson2 :");
+        person2.DisplayInfo();
+
+
+        Person person3 = new Person("akter", 4);
+        person3.DisplayInfo();
+
+        //Console.WriteLine($"Name: {person1.name}, Age: {person1.age}");
+
         //switch 
 
         //Console.Write("Enter a digit:");
@@ -73,12 +119,7 @@ class Test
 
         // lists
 
-        /**List<T> হচ্ছে C# এর একটা Generic Collection ক্লাস যা ব্যবহার করে তুমি অনেকগুলো ডাটা একসাথে রাখতে পারো, ঠিক অ্যারে (array) এর মতো—but আরও সুবিধাজনক।
 
-🔹 এখানে T মানে হচ্ছে Type — যেমন List<int>, List<string> ইত্যাদি।
-🔹 List-এর সাইজ ডাইনামিক — মানে চাইলে তুমি যেকোনো সময় ডাটা যোগ করতে বা বাদ দিতে পারো।
-
-**/
         //List<string> names = new List<string>();
 
 
@@ -121,24 +162,13 @@ class Test
 
         //    febonacchiNumber.Add(lastPrevious + previous);
 
-           
+
         //}
         //foreach (int num in febonacchiNumber)
         //{
         //    Console.WriteLine(num);
         //}
 
-
-        Person person1 = new Person();
-        person1.name = "khushi";
-        person1.age = 22;
-
-        Person person2 = new Person();
-        person2.name = "reshma";
-        person2.age = 23;
-        
-        Console.WriteLine("Person 1:");
-        Console.WriteLine($"Name: {person1.name}, Age: {person1.age}");
 
 
     }
