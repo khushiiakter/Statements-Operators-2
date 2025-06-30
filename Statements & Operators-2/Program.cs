@@ -4,6 +4,11 @@ class Person
 {
    public string name;
    public int age;
+
+    public void DisplayInfo()
+    {
+
+    }
 }
 
 
