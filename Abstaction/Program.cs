@@ -57,7 +57,7 @@ class Program
     public static void Main(string[] args)
     {
         Dog dog = new Dog("Tom");
-        Animal cat = new Cat("Meow");
+        //Animal cat = new Cat("Meow");
         dog.MakeSound();
         dog.ShowName();
     }
