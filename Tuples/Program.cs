@@ -20,4 +20,27 @@ Console.WriteLine($"Status: {result1.status}; UserName: {result1.user.Username};
 //Console.WriteLine(membership.CreateUser("khuhsi", "1234"));
 
 
-(double x, int y) tupleExample = (5.3, 5);
+//(double x, int y) tupleExample = (5.3, 5);
+
+//nullable type
+string name = null;
+
+//int age = null; showing error;
+
+int? age = null; // now i can set the null.
+Console.WriteLine(age.HasValue);
+if (age.HasValue)
+{
+
+    Console.WriteLine($"age is {age.Value}");
+}
+else
+{
+    Console.WriteLine($"age is null");
+
+}
+
+
+// lamda method --> arrow function er moto. ak line e return hole.
+
+int sum (int a, int b) => a + b;
